@@ -22,6 +22,10 @@ public class Gaulois {
 		System.out.println("Le gaulois " + this.nom + ": « "+text +" »");
 	}
 	
+	public void frapper(Romain r) {
+		System.out.println(this.getNom()+ " envoie un grand coup dans la mâchoire de " + r.getNom());
+		r.recevoirCoup((this.force/3));
+	}
 	//main 
 	
 	public static void main(String[] args) {

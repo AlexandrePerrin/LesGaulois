@@ -21,4 +21,11 @@ public class Romain {
 	public void parler(String text) {
 		System.out.println("Le romain " + this.nom + ": « "+text +" »");
 	}
+	
+	public void recevoirCoup(int f) {
+		this.force = this.force -f;
+		if (this.force < 0) {this.force = 0;}
+		if (this.force > 0) {this.parler("Aïe !");}
+		else {this.parler("J'abandonne !");}
+	}
 }
