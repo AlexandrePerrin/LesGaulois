@@ -8,6 +8,8 @@ public class Soldat extends Romain{
 		super(nom,force);
 		this.Grade=Grade;
 	}
-	
+	public grade getGrade() {
+		return this.Grade;
+	}
 
 }

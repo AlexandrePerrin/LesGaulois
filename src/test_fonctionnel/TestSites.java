@@ -19,12 +19,33 @@ public class TestSites {
 	Gaulois obelix = new Gaulois("Obélix",15);
 	Gaulois prolix = new Gaulois("Prolix",2);
 	
-	Soldat brutux = new Soldat ("Brutus",5,grade.CENTURION);
+	Soldat brutus = new Soldat ("Brutus",5,grade.CENTURION);
 	Soldat milexcus = new Soldat ("Milexcus",2,grade.SOLDAT);
 	Soldat tullius = new Soldat ("Tullius Octopus",2,grade.TESSERARIUS);
 	Soldat ballon = new Soldat ("Ballondebaudrus",3,grade.OPTIO);
 	
+	lagaule.addVillageois(agecanonix);
+	lagaule.addVillageois(assurancetourix);
+	lagaule.addVillageois(asterix);
+	lagaule.addVillageois(obelix);
+	lagaule.addVillageois(prolix);
 	
+	lecamp.addsoldat(brutus);
+	lecamp.addsoldat(milexcus);
+	lecamp.addsoldat(tullius);
+	lecamp.addsoldat(ballon);
+	
+	lagaule.afficherVillage();
+	lecamp.afficherCamp();
+	
+	Soldat briseradius = new Soldat ("Briseradius",4,grade.SOLDAT);
+	Soldat chorus = new Soldat ("Chorus",4,grade.CENTURION);
+	Gaulois abraracourcix = new Gaulois("Abraracourcix",5);
+	
+	lecamp.changerCommandant(briseradius);
+	lecamp.changerCommandant(chorus);
+	lagaule.changerChef(abraracourcix);
 	}
 	
 }
+	
