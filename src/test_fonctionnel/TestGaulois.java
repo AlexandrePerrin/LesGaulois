@@ -1,7 +1,6 @@
 package test_fonctionnel;
 
-import personnages.Gaulois;
-import personnages.Romain;
+import personnages.*;
 
 public class TestGaulois {
 
@@ -13,6 +12,7 @@ public class TestGaulois {
 		minus.parler("UN GAU...UN GAUGAU...");
 		for (int i = 0; i < 3; i++) {
 			asterix.frapper(minus);
+			minus.frapper(asterix);
 		}
 	}
 
