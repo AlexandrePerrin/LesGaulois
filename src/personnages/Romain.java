@@ -14,8 +14,8 @@ public class Romain {
 
 	// méthodes
 
-	public int getForce() {
-		return force;
+	public String getNom() {
+		return nom;
 	}
 
 	public void parler(String text) {
