@@ -4,14 +4,15 @@ package personnages;
 public abstract class Personnage {
 
 	private String nom;
-	private int force;
-	protected double buff;
+	protected int force;
+	protected double buff=1;
+	
 	// constructeur
 
 	public Personnage(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
-		this.buff = 1;
+
 	}
 
 	// méthodes
@@ -30,18 +31,20 @@ public abstract class Personnage {
 		if (buff <= 1) {
 		System.out.println(donnerAuteur() + this.getNom() + " envoie un grand coup de force "+this.force+" dans la mâchoire de "
 				+ adversaire.donnerAuteur() + adversaire.getNom());
-		adversaire.recevoirCoup(this.force / 3);
+		adversaire.recevoirCoup(this.force);
+			
 		}
 		else {
-			System.out.println(donnerAuteur() + this.getNom() + " envoie un grand coup de force "+this.force+" dans la mâchoire de "
+			System.out.println(donnerAuteur() + this.getNom() + " envoie un grand coup de force "+(int)this.force*this.buff+" dans la mâchoire de "
 					+ adversaire.donnerAuteur() + adversaire.getNom());
 		
-		adversaire.recevoirCoup((int)(this.force *this.buff) / 3);
+		adversaire.recevoirCoup((int)(this.force *this.buff));
 		buff = buff -1/2;
 		}
 	}
 
 	public void recevoirCoup(int force) {
+		
 		this.force = this.force - force;
 		if (this.force < 0) {
 			this.force = 0;

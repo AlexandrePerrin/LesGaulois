@@ -11,5 +11,6 @@ public class Soldat extends Romain{
 	public grade getGrade() {
 		return this.Grade;
 	}
-
+	@Override
+	public String donnerAuteur() {return "Le "+this.Grade+" ";}
 }
