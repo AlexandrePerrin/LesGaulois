@@ -26,10 +26,7 @@ public class TestGaulois {
 		asterix.parler("Bonjour à tous");
 		minus.parler("UN GAU...UN GAUGAU...");
 		
-		while (minus.getForce()!=0) {
-			asterix.frapper(minus);
-			minus.frapper(asterix);
-		}
+		
 	}
 
 }
